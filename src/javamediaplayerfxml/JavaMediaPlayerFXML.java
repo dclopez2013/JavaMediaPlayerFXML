@@ -40,7 +40,8 @@ public class JavaMediaPlayerFXML extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
-        
+        String css = this.getClass().getResource("mpStyle.css").toExternalForm();
+        scene.getStylesheets().add(css);
         Pstage.setScene(scene);
         Pstage.show();
     }

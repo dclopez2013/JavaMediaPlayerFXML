@@ -8,15 +8,15 @@
 
 <AnchorPane id="AnchorPane" fx:id="ap" prefHeight="513.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javamediaplayerfxml.FXMLDocumentController">
     <children>
-        <Button fx:id="playButton" layoutX="325.0" layoutY="474.0" text="Play" />
-      <Button fx:id="pauseButton" layoutX="384.0" layoutY="473.0" text="Pause" />
+        <Button fx:id="playButton" layoutX="325.0" layoutY="474.0" onAction="#playMedia" text="Play" />
+      <Button fx:id="pauseButton" layoutX="384.0" layoutY="473.0" onAction="#pauseMedia" text="Pause" />
       <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="600.0" layoutX="100.0" layoutY="57.0" />
       <Button fx:id="fileButton" layoutX="516.0" layoutY="473.0" onAction="#openFile" text="Select File" />
       <Label layoutX="155.0" layoutY="12.0" text="Currently Playing:" underline="true">
          <font>
             <Font size="25.0" />
          </font></Label>
-      <Label layoutX="408.0" layoutY="22.0" text="Blank">
+      <Label fx:id="songName" layoutX="408.0" layoutY="22.0" text="Blank">
          <font>
             <Font size="20.0" />
          </font></Label>
@@ -25,10 +25,11 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="198.0" layoutY="473.0" text="Stopped">
+      <Label fx:id="playStatus" layoutX="198.0" layoutY="473.0" text="Stopped">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
+      <Button fx:id="pauseButton1" layoutX="446.0" layoutY="473.0" onAction="#pauseMedia" text="Stop" />
     </children>
 </AnchorPane>

@@ -38,10 +38,14 @@ import sun.management.FileSystem;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private Button play;
+    private Button playButton;
        
     @FXML
-    private Button pause;
+    private Button pauseButton;
+    
+       
+    @FXML
+    private Button stopButton;
     
     @FXML
     private Button fileButton;
@@ -71,11 +75,11 @@ public class FXMLDocumentController implements Initializable {
     public void openFile(){
       Alert alert = new Alert(AlertType.CONFIRMATION, "Opeing file explorer to select a file");
       mediaF = JavaMediaPlayerFXML.fc.showOpenDialog(JavaMediaPlayerFXML.getStage());
-      Path Tstring = mediaF.toPath();
+     // Path Tstring = mediaF.toPath();
       
       alert.setContentText("You selected: "+ mediaF);
       alert.showAndWait();
-      
+      this.setTitle();
             // public static Media fileMedia = new Media(‪);         
             
       URI f = mediaF.toURI();
@@ -95,8 +99,16 @@ public class FXMLDocumentController implements Initializable {
          mp.pause();
      }
      
+    
+     public void stopMedia(){
+         this.setPlayStatus("Stopped");
+         mp.stop();
+     }
+     
+     
+     
      public void playMedia(){
-      this.setTitle();
+      
       this.setPlayStatus("Playing");
      mp.play();
      }
