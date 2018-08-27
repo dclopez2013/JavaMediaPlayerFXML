@@ -1,2 +1,3 @@
 # JavaMediaPlayerFXML
 
+![](images/mediaPlayer.png)
