@@ -7,7 +7,10 @@ play your favorate video and audio files.
 ### playlists
 
 ## Screen Shot #1
-![](mediaNew.png)
+![](mediaplayermod2pt1.png)
 
 ## Screen Shot #2
-![](fxmlMediaNew.png)
+![](mediaplayermod2pt2.png)
+
+## Screen Shot #3
+![](mediaplayermod2pt3.png)
